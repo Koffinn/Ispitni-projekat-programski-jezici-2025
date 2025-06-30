@@ -1,36 +1,26 @@
 package rs.ac.singidunum.entity;
 
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
 @Entity
-@Table(name = "student")
+@Table(name = "admin")
 @NoArgsConstructor
 @Getter
 @Setter
-public class Student {
+public class Admin {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
     @Column(nullable = false)
-    private String ime;
-    @Column(nullable = false)
-    private String prezime;
-    @Column(nullable = false)
-    private String brojIndeksa;
-    @Column(nullable = false)
-    private String smer;
+    private String email;
     @Column(nullable = false)
     private String lozinka;
-
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
-    private List<Prijava> prijave;
 
 
 }

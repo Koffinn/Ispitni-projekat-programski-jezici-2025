@@ -5,32 +5,29 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Table(name = "student")
+@Table(name = "ispit")
 @NoArgsConstructor
 @Getter
 @Setter
-public class Student {
+public class Ispit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
     @Column(nullable = false)
-    private String ime;
+    private String predmet;
     @Column(nullable = false)
-    private String prezime;
+    private String profesor;
     @Column(nullable = false)
-    private String brojIndeksa;
+    private LocalDate datum;
     @Column(nullable = false)
     private String smer;
-    @Column(nullable = false)
-    private String lozinka;
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "ispit", cascade = CascadeType.ALL)
     private List<Prijava> prijave;
-
-
 }
