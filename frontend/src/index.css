@@ -1,0 +1,123 @@
+/* Globalne promenljive i osnovna podešavanja fonta */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark; /* Omogućava pregledaču da primeni podrazumevane boje za tamnu/svetu temu */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Stilovi za osnovni "body" element */
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Svetlo siva pozadina za celu stranicu */
+  color: #333; /* Tamna boja za osnovni tekst */
+}
+
+/* Glavni kontejner aplikacije */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Stilovi za glavni naslov */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #007bff; /* Plava boja za naslove */
+}
+
+/* Stilovi za dugmiće */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #007bff; /* Osnovna plava boja */
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+  color: white;
+  margin: 5px;
+}
+button:hover {
+  border-color: #0056b3;
+  background-color: #0056b3; /* Tamnija plava pri prelasku mišem */
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Stilovi za forme */
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form div {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form input[type="date"] {
+  width: calc(100% - 22px); /* Oduzimamo padding i border */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Osigurava da padding ne povećava širinu */
+}
+
+/* Stilovi za tabele */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden; /* Osigurava da se border-radius primeni na uglove tabele */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  color: #333;
+}
+
+th {
+  background-color: #007bff; /* Plava pozadina za zaglavlje tabele */
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa; /* Svetlo siva za parne redove radi bolje čitljivosti */
+}
